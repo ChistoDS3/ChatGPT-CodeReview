@@ -314,11 +314,6 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@dqbd/tiktoken@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@dqbd/tiktoken/-/tiktoken-0.4.0.tgz#070e770ae3fa3fa8fccbea4f2e02ab87117f6c3a"
-  integrity sha512-iaHgmwKAOqowBFZKxelyszoeGLoNw62eOULcmyme1aA1Ymr3JgYl0V7jwpuUm7fksalycZajx3loFn9TRUaviw==
-
 "@esbuild/android-arm64@0.17.11":
   version "0.17.11"
   resolved "https://registry.yarnpkg.com/@esbuild/android-arm64/-/android-arm64-0.17.11.tgz#52c3e6cabc19c5e4c1c0c01cb58f0442338e1c14"
@@ -1642,7 +1637,7 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-base64-js@^1.3.1:
+base64-js@^1.3.1, base64-js@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
@@ -1821,15 +1816,15 @@ char-regex@^1.0.2:
   resolved "https://registry.yarnpkg.com/char-regex/-/char-regex-1.0.2.tgz#d744358226217f981ed58f479b1d6bcc29545dcf"
   integrity sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==
 
-chatgpt@^5:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/chatgpt/-/chatgpt-5.1.1.tgz#981dba33286cd96ec694972f3532d2d4a7850c88"
-  integrity sha512-ml1u4/KqXdAKfaRwqE0uvRTh5JoRgosstH2LF4PpsawG7MUtIzAVaE/MMEAaV02uGbOlAH4IgKI3mDHkQ0Dmlw==
+chatgpt@^5.2.4:
+  version "5.2.5"
+  resolved "https://registry.yarnpkg.com/chatgpt/-/chatgpt-5.2.5.tgz#6a9f951fd58d8501ff0384a338eacdc0e3d8544f"
+  integrity sha512-DNhBzPb2zTDjJADY44XfngMvsvrvHRq1md2VPXLmnKeP1UCeA1B6pV3s9ZRwlcgjVT0RyM77fRj1xj5V11Vctg==
   dependencies:
-    "@dqbd/tiktoken" "^0.4.0"
     cac "^6.7.14"
     conf "^11.0.1"
-    eventsource-parser "^0.0.5"
+    eventsource-parser "^1.0.0"
+    js-tiktoken "^1.0.5"
     keyv "^4.5.2"
     p-timeout "^6.1.1"
     quick-lru "^6.1.1"
@@ -2246,10 +2241,10 @@ events@^3.3.0:
   resolved "https://registry.yarnpkg.com/events/-/events-3.3.0.tgz#31a95ad0a924e2d2c419a813aeb2c4e878ea7400"
   integrity sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==
 
-eventsource-parser@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/eventsource-parser/-/eventsource-parser-0.0.5.tgz#6041bf765ebced8ac83de9dc78754b7b919b7342"
-  integrity sha512-BAq82bC3ZW9fPYYZlofXBOAfbpmDzXIOsj+GOehQwgTUYsQZ6HtHs6zuRtge7Ph8OhS6lNH1kJF8q9dj17RcmA==
+eventsource-parser@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/eventsource-parser/-/eventsource-parser-1.0.0.tgz#6332e37fd5512e3c8d9df05773b2bf9e152ccc04"
+  integrity sha512-9jgfSCa3dmEme2ES3mPByGXfgZ87VbP97tng1G2nWwWx6bV2nYxm2AWCrbQjXToSe+yYlqaZNtxffR9IeQr95g==
 
 eventsource@^1.1.0:
   version "1.1.2"
@@ -3172,6 +3167,13 @@ joycon@^3.0.0, joycon@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/joycon/-/joycon-3.1.1.tgz#bce8596d6ae808f8b68168f5fc69280996894f03"
   integrity sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==
+
+js-tiktoken@^1.0.5:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/js-tiktoken/-/js-tiktoken-1.0.6.tgz#f32f4b9b3c33d11f12b5cf016b3c729370817ee9"
+  integrity sha512-lxHntEupgjWvSh37WxpAW4XN6UBXBtFJOpZZq5HN5oNjDfN7L/iJhHOKjyL/DFtuYXUwn5jfTciLtOWpgQmHjQ==
+  dependencies:
+    base64-js "^1.5.1"
 
 js-tokens@^4.0.0:
   version "4.0.0"
